@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Lombiq.Associativy.InternalLinkGraphBuilder.Models;
+﻿using Lombiq.Associativy.InternalLinkGraphBuilder.Models;
 using Orchard;
 
 namespace Lombiq.Associativy.InternalLinkGraphBuilder.Services

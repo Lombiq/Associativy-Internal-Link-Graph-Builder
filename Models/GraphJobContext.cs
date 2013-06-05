@@ -1,5 +1,4 @@
-﻿using Orchard.Environment.Extensions;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace Lombiq.Associativy.InternalLinkGraphBuilder.Models
 {

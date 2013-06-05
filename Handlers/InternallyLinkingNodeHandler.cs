@@ -1,19 +1,12 @@
-﻿using Associativy.GraphDiscovery;
-using HtmlAgilityPack;
-using Orchard.ContentManagement;
-using Orchard.ContentManagement.Handlers;
-using Orchard.Core.Common.Models;
-using Orchard.Environment.Extensions;
-using Orchard.Settings;
-using Piedone.HelpfulLibraries.Tasks.Jobs;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Orchard.Mvc;
+using Lombiq.Associativy.InternalLinkGraphBuilder.Services;
+using Orchard.ContentManagement.Handlers;
+using Orchard.Core.Common.Models;
+using Orchard.Core.Common.Settings;
 using Orchard.Environment;
 using Orchard.Services;
-using Orchard.Core.Common.Settings;
-using Lombiq.Associativy.InternalLinkGraphBuilder.Services;
 
 namespace Lombiq.Associativy.InternalLinkGraphBuilder.Handlers
 {
