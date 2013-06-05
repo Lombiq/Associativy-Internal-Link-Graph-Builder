@@ -1,0 +1,11 @@
+﻿@model Lombiq.Associativy.InternalLinkGraphBuilder.Models.Pages.Admin.AssociativyInternalLinkGraphManageGraphPart
+
+<fieldset>
+    <legend>@T("Internal link graph settings")</legend>
+    <ol>
+        <li>
+            @Html.CheckBoxFor(m => m.GraphSettings.ProcessInternalLinks)
+            <label for="@Html.FieldIdFor(m => m.GraphSettings.ProcessInternalLinks)" class="forcheckbox">@T("Process internal links")</label>
+        </li>
+    </ol>
+</fieldset>

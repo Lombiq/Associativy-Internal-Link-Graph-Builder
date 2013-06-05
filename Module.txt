@@ -10,4 +10,4 @@ Features:
 		Name: Associativy Internal Link Graph Builder
         Description: Adds the ability to automatically create Associativy graphs from internal links between content items.
 		Category: Associativy
-		Dependencies: Associativy, Piedone.HelpfulLibraries.Tasks.Jobs
+		Dependencies: Associativy.Administration, Piedone.HelpfulLibraries.KeyValueStore, Piedone.HelpfulLibraries.Tasks.Jobs, Orchard.Alias
