@@ -52,7 +52,7 @@ namespace Lombiq.Associativy.InternalLinkGraphBuilder.Drivers.Pages.Admin
 
         private static string GraphName(AssociativyInternalLinkGraphManageGraphPart part)
         {
-            return part.As<AssociatvyManageGraphPart>().GraphDescriptor.Name;
+            return part.As<AssociativyManageGraphPart>().GraphDescriptor.Name;
         }
     }
 }
