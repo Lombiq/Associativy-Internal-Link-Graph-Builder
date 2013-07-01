@@ -27,7 +27,7 @@ namespace Lombiq.Associativy.InternalLinkGraphBuilder.Services
         public void Set(string graphName, IGraphSettings settings)
         {
             var s = GetSettings();
-            s.GraphSettings[graphName] = settings;
+            s.GraphSettings[graphName] = new GraphSettings(settings); // So it can be saved properly with KVStore
             _keyValueStore.Set(SettingsKey, s);
         }
 
@@ -45,12 +45,12 @@ namespace Lombiq.Associativy.InternalLinkGraphBuilder.Services
         // Using a class for this for future-proofness: global settings may come.
         public class InternalLinkGraphSettings
         {
-            public Dictionary<string, IGraphSettings> GraphSettings { get; set; }
+            public Dictionary<string, GraphSettings> GraphSettings { get; set; }
 
 
             public InternalLinkGraphSettings()
             {
-                GraphSettings = new Dictionary<string, IGraphSettings>();
+                GraphSettings = new Dictionary<string, GraphSettings>();
             }
         }
     }

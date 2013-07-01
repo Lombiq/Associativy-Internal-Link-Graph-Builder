@@ -5,5 +5,15 @@ namespace Lombiq.Associativy.InternalLinkGraphBuilder.Models
     public class GraphSettings : IGraphSettings
     {
         public bool ProcessInternalLinks { get; set; }
+
+
+        public GraphSettings()
+        {
+        }
+
+        public GraphSettings(IGraphSettings otherSettings)
+        {
+            ProcessInternalLinks = otherSettings.ProcessInternalLinks;
+        }
     }
 }
