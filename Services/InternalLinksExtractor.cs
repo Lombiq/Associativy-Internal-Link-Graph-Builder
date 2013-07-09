@@ -119,7 +119,7 @@ namespace Lombiq.Associativy.InternalLinkGraphBuilder.Services
                     foreach (var url in jobContext.LinkedUrls)
                     {
                         var route = _aliasService.Get(url.TrimStart('/'));
-                        if (route != null && route.ContainsKey("Id") || route.ContainsKey("threadId")) // threadId is hack for NGM.Forum threads
+                        if (route != null && (route.ContainsKey("Id") || route.ContainsKey("threadId"))) // threadId is hack for NGM.Forum threads
                         {
                             var target = route.ContainsKey("Id") ? _contentManager.Get(Convert.ToInt32(route["Id"])) : _contentManager.Get(Convert.ToInt32(route["threadId"]));
                             if (target != null && graph.ContentTypes.Contains(target.ContentType))
