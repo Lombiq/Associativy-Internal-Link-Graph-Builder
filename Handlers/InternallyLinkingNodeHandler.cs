@@ -26,9 +26,7 @@ namespace Lombiq.Associativy.InternalLinkGraphBuilder.Handlers
                                        ? typePartSettings.Flavor
                                        : part.PartDefinition.Settings.GetModel<BodyPartSettings>().FlavorDefault;
 
-                            return htmlFiltersWork.Value
-                                .Where(x => x.GetType().Name.Equals(flavor + "filter", StringComparison.OrdinalIgnoreCase))
-                                .Aggregate(part.Text, (text, filter) => filter.ProcessContent(text));
+                            return htmlFiltersWork.Value.Aggregate(part.Text, (text, filter) => filter.ProcessContent(text, flavor));
                         });
                 });
         }
