@@ -56,9 +56,11 @@ namespace Lombiq.Associativy.InternalLinkGraphBuilder.Services
 
         public void ProcessHtml(ContentItem item, Func<ContentItem, string> htmlFactory)
         {
-            var graphs = _graphManager.FindGraphs(new GraphContext { ContentTypes = new[] { item.ContentType } });
+            var graphs = _graphManager
+                .FindGraphs(new GraphContext { ContentTypes = new[] { item.ContentType } })
+                .Where(graph => _settingsService.Get(graph.Name).ProcessInternalLinks);
 
-            if (!graphs.Any() && !graphs.Any(graph => _settingsService.Get(graph.Name).ProcessInternalLinks)) return;
+            if (!graphs.Any()) return;
 
             var html = htmlFactory(item);
             if (string.IsNullOrEmpty(html)) return;
