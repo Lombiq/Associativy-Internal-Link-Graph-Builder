@@ -18,7 +18,7 @@ namespace Lombiq.Associativy.InternalLinkGraphBuilder.Services
 {
     public class InternalLinksExtractor : IInternalLinksExtractor, IScheduledTaskHandler, IOrchardShellEvents
     {
-        private const string TaskType = "Lombiq.Associativy.InternalLinkGraphBuilderh.InternalLinksGraphUpdater";
+        private const string TaskType = "Lombiq.Associativy.InternalLinkGraphBuilder.InternalLinksGraphUpdater";
         private const string Industry = "Lombiq.Associativy.InternalLinkGraphBuilder.InternalLinksBuilding";
         private const int ItemBatch = 10;
         private const int RunPerMinutes = 5;
