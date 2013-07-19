@@ -114,9 +114,7 @@
     <Compile Include="Services\InternalLinksExtractor.cs" />
     <Compile Include="WellKnownConstants.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Views\DisplayTemplates\Pages\Admin\InternalLinkGraphManageGraph.cshtml" />
   </ItemGroup>
