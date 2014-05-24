@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Lombiq.Associativy.InternalLinkGraphBuilder.Models
+namespace Associativy.InternalLinkGraphBuilder.Models
 {
     public class GraphJobContext
     {

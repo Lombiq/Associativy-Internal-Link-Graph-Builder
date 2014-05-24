@@ -1,6 +1,6 @@
 ﻿using Orchard.ContentManagement;
 
-namespace Lombiq.Associativy.InternalLinkGraphBuilder.Models.Pages.Admin
+namespace Associativy.InternalLinkGraphBuilder.Models.Pages.Admin
 {
     public class AssociativyInternalLinkGraphManageGraphPart : ContentPart
     {

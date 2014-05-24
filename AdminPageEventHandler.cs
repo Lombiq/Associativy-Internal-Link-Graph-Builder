@@ -1,8 +1,8 @@
 ﻿using Associativy.Administration;
-using Lombiq.Associativy.InternalLinkGraphBuilder.Models.Pages.Admin;
+using Associativy.InternalLinkGraphBuilder.Models.Pages.Admin;
 using Piedone.HelpfulLibraries.Contents.DynamicPages;
 
-namespace Lombiq.Associativy.InternalLinkGraphBuilder
+namespace Associativy.InternalLinkGraphBuilder
 {
     public class AdminPageEventHandler : IPageEventHandler
     {

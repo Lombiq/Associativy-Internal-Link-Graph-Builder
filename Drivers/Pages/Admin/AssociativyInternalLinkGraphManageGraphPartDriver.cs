@@ -1,16 +1,16 @@
 ﻿using Associativy.Administration.Models.Pages.Admin;
-using Lombiq.Associativy.InternalLinkGraphBuilder.Models.Pages.Admin;
-using Lombiq.Associativy.InternalLinkGraphBuilder.Services;
+using Associativy.InternalLinkGraphBuilder.Models.Pages.Admin;
+using Associativy.InternalLinkGraphBuilder.Services;
 using Orchard.ContentManagement;
 using Orchard.ContentManagement.Drivers;
 
-namespace Lombiq.Associativy.InternalLinkGraphBuilder.Drivers.Pages.Admin
+namespace Associativy.InternalLinkGraphBuilder.Drivers.Pages.Admin
 {
     public class AssociativyInternalLinkGraphManageGraphPartDriver : ContentPartDriver<AssociativyInternalLinkGraphManageGraphPart>
     {
         private readonly IGraphSettingsService _settingsService;
 
-        protected override string Prefix { get { return "Lombiq.Associativy.InternalLinkGraphBuilder.AssociativyInternalLinkGraphManageGraphPart"; } }
+        protected override string Prefix { get { return "Associativy.InternalLinkGraphBuilder.AssociativyInternalLinkGraphManageGraphPart"; } }
 
 
         public AssociativyInternalLinkGraphManageGraphPartDriver(IGraphSettingsService settingsService)

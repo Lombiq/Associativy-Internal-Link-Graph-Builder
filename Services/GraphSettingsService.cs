@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
-using Lombiq.Associativy.InternalLinkGraphBuilder.Models;
+using Associativy.InternalLinkGraphBuilder.Models;
 using Piedone.HelpfulLibraries.KeyValueStore;
 
-namespace Lombiq.Associativy.InternalLinkGraphBuilder.Services
+namespace Associativy.InternalLinkGraphBuilder.Services
 {
     public class GraphSettingsService : IGraphSettingsService
     {
-        private const string SettingsKey = "Lombiq.Associativy.InternalLinkGraphBuilder.Settings";
+        private const string SettingsKey = "Associativy.InternalLinkGraphBuilder.Settings";
 
         private readonly IKeyValueStore _keyValueStore;
 

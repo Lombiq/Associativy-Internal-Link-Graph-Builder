@@ -1,7 +1,7 @@
-﻿using Lombiq.Associativy.InternalLinkGraphBuilder.Models;
+﻿using Associativy.InternalLinkGraphBuilder.Models;
 using Orchard;
 
-namespace Lombiq.Associativy.InternalLinkGraphBuilder.Services
+namespace Associativy.InternalLinkGraphBuilder.Services
 {
     public interface IGraphSettingsService : IDependency
     {

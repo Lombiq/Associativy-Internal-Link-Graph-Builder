@@ -1,5 +1,5 @@
 ﻿
-namespace Lombiq.Associativy.InternalLinkGraphBuilder.Models
+namespace Associativy.InternalLinkGraphBuilder.Models
 {
     public interface IGraphSettings
     {

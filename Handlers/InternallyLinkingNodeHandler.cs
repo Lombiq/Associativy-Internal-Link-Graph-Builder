@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Lombiq.Associativy.InternalLinkGraphBuilder.Services;
+using Associativy.InternalLinkGraphBuilder.Services;
 using Orchard.ContentManagement.Handlers;
 using Orchard.Core.Common.Models;
 using Orchard.Core.Common.Settings;
 using Orchard.Environment;
 using Orchard.Services;
 
-namespace Lombiq.Associativy.InternalLinkGraphBuilder.Handlers
+namespace Associativy.InternalLinkGraphBuilder.Handlers
 {
     public class InternallyLinkingNodeHandler : ContentHandler
     {

@@ -6,7 +6,7 @@ Version: 1.0
 OrchardVersion: 1.8
 Description: Adds the ability to automatically create Associativy graphs from internal links between content items.
 Features:
-    Lombiq.Associativy.InternalLinkGraphBuilder:
+    Associativy.InternalLinkGraphBuilder:
 		Name: Associativy Internal Link Graph Builder
         Description: Adds the ability to automatically create Associativy graphs from internal links between content items.
 		Category: Associativy

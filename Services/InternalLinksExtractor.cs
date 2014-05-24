@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Associativy.GraphDiscovery;
 using HtmlAgilityPack;
-using Lombiq.Associativy.InternalLinkGraphBuilder.Models;
+using Associativy.InternalLinkGraphBuilder.Models;
 using Orchard.Alias;
 using Orchard.ContentManagement;
 using Orchard.ContentManagement.Aspects;
@@ -14,12 +14,12 @@ using Orchard.Tasks.Scheduling;
 using Piedone.HelpfulLibraries.Tasks;
 using Piedone.HelpfulLibraries.Tasks.Jobs;
 
-namespace Lombiq.Associativy.InternalLinkGraphBuilder.Services
+namespace Associativy.InternalLinkGraphBuilder.Services
 {
     public class InternalLinksExtractor : IInternalLinksExtractor, IScheduledTaskHandler, IOrchardShellEvents
     {
-        private const string TaskType = "Lombiq.Associativy.InternalLinkGraphBuilder.InternalLinksGraphUpdater";
-        private const string Industry = "Lombiq.Associativy.InternalLinkGraphBuilder.InternalLinksBuilding";
+        private const string TaskType = "Associativy.InternalLinkGraphBuilder.InternalLinksGraphUpdater";
+        private const string Industry = "Associativy.InternalLinkGraphBuilder.InternalLinksBuilding";
         private const int ItemBatch = 10;
         private const int RunPerMinutes = 5;
 
