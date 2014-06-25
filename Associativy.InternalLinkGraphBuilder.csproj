@@ -104,7 +104,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminPageEventHandler.cs" />
+    <Compile Include="Handlers\AdminPageHandler.cs" />
     <Compile Include="Drivers\Pages\Admin\AssociativyInternalLinkGraphManageGraphPartDriver.cs" />
     <Compile Include="Handlers\InternallyLinkingNodeHandler.cs" />
     <Compile Include="Models\GraphJobContext.cs" />
