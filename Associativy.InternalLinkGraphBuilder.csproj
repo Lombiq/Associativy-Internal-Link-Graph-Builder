@@ -116,7 +116,9 @@
     <Compile Include="Services\IInternalLinksExtractor.cs" />
     <Compile Include="Services\InternalLinksExtractor.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Licence.md" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Views\DisplayTemplates\Pages\Admin\InternalLinkGraphManageGraph.cshtml" />
   </ItemGroup>
