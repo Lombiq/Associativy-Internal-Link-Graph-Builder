@@ -3,7 +3,7 @@ AntiForgery: enabled
 Author: Lombiq
 Website: http://associativy.com
 Version: 1.0
-OrchardVersion: 1.9.2
+OrchardVersion: 1.9.3
 Description: Adds the ability to automatically create Associativy graphs from internal links between content items.
 Features:
     Associativy.InternalLinkGraphBuilder:
