@@ -13,6 +13,7 @@ using Orchard.Settings;
 using Orchard.Tasks.Scheduling;
 using Piedone.HelpfulLibraries.Tasks;
 using Piedone.HelpfulLibraries.Tasks.Jobs;
+using Orchard.Logging;
 
 namespace Associativy.InternalLinkGraphBuilder.Services
 {
@@ -31,6 +32,8 @@ namespace Associativy.InternalLinkGraphBuilder.Services
         private readonly IScheduledTaskManager _scheduledTaskManager;
         private readonly IClock _clock;
         private readonly IGraphSettingsService _settingsService;
+
+        public ILogger Logger { get; set; }
 
 
         public InternalLinksExtractor(
@@ -51,6 +54,8 @@ namespace Associativy.InternalLinkGraphBuilder.Services
             _scheduledTaskManager = scheduledTaskManager;
             _clock = clock;
             _settingsService = settingsService;
+
+            Logger = NullLogger.Instance;
         }
 
 
@@ -81,14 +86,22 @@ namespace Associativy.InternalLinkGraphBuilder.Services
                 var href = link.GetAttributeValue("href", null);
                 if (href != null)
                 {
-                    if (Uri.IsWellFormedUriString(href, UriKind.Relative))
+                    try
                     {
-                        urls.Add(new Uri(itemUri, href).LocalPath);
+                        if (Uri.IsWellFormedUriString(href, UriKind.Relative))
+                        {
+                            urls.Add(new Uri(itemUri, href).LocalPath);
+                        }
+                        else
+                        {
+                            var uri = new Uri(href);
+                            if (uri.Host == siteUri.Host) urls.Add(uri.LocalPath);
+                        }
                     }
-                    else
+                    catch (UriFormatException ex)
                     {
-                        var uri = new Uri(href);
-                        if (uri.Host == siteUri.Host) urls.Add(uri.LocalPath);
+                        // Such errors shouldn't cause other processes to halt.
+                        Logger.Warning(ex, $"Couldn't follow the internal URL {href} because it has an invalid format.");
                     }
                 }
             }
